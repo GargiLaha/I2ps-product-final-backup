@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+.myPanelClass{
+    margin-top: 30px !important; 
+  }
+
+  body{
+    height: 100vh;
+  }
+
+  .mat-form-field-infix
+{
+  margin-top: -10px;
+}
+
+.logo{
+  font-size: 30px;
+}
+
+header mdb-navbar-brand
+{
+  font-family: 'Darker Grotesque', sans-serif;
+  
+}
+
+p,h5,h6,h3,h4,a{
+  font-family: 'Darker Grotesque', sans-serif;
+
+}
+
+body {
+  // max-width: 100%;
+  overflow-x: hidden;
+// min-height: 1000vh;
+}
+
+
+a{
+  font-size: 20px;}

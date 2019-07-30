@@ -1,0 +1,73 @@
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="img">
+  <div id="banner">
+    <div id="cloud-scroll"></div>
+<mat-tab-group (selectedTabChange) = "myClick($event)">
+  <mat-tab (selectedTabChange) = "myClick($event)" label="{{role}}" *ngFor="let role of roles">
+     <div class="wrapper">
+      <button (click)="done()" background-color="black" mat-button>CONFIRM</button>
+    </div>
+    
+    
+          <div class="container">
+       
+              <div class="row">
+             <br>
+             <!--Start-->
+      <mat-card class="col-md-4" *ngFor = "let provider of filteredProviders" class="example-card">
+        <br>
+
+          <mat-card-header>
+           <b><h3>
+              <div class="img">
+                  <p><img  src="https://www.flaticon.com/premium-icon/icons/svg/694/694659.svg" alt="card image"></p>
+              </div>
+            <mat-card-title style="text-align: center">{{provider.name | uppercase}}</mat-card-title>
+            <mat-card-subtitle style="text-align: center">{{provider.emailId}}</mat-card-subtitle>
+           </h3></b>
+          </mat-card-header>
+           
+          <mat-card-content>
+            
+            <p> <strong>EmailID   :</strong>  {{provider.emailId}} </p>
+            
+            <p><strong>Charge/Hr   :</strong>  {{provider.chargePerHour}}</p>
+              
+             <p><strong>Domain   :</strong>  {{provider.domain}}</p>
+             
+              <p><strong>Skills   :</strong>
+              <span *ngFor = "let skill of provider.skills" >
+                {{skill}}
+              </span> </p>
+              
+                       
+          </mat-card-content>
+          
+          <br>
+          <mat-card-actions>
+            <button *ngIf = "!provider.status" (click)="accept(provider)" mat-button>Accept</button>
+            <button *ngIf = "!provider.status" (click)="reject(provider)" mat-button>Reject</button>
+            <button *ngIf="provider.status" mat-button >Accepted</button>
+          </mat-card-actions>
+        </mat-card>
+        <!-- </div> -->
+        <!--End-->
+
+     
+
+
+      </div>
+</div>
+
+  </mat-tab>
+
+</mat-tab-group>
+</div>
+
+
+</div>
